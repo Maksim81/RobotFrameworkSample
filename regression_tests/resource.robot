@@ -39,7 +39,6 @@ Submit Credentials
 Accept Cookies
     Click Link    I agree
 
-
 Car leasing page Should Be Open
     Location Should Be    ${CAR LEASING URL}
     Title Should Be    Car leasing | SEB
