@@ -11,8 +11,7 @@ assert pathlib.Path.cwd() == pathlib.Path(__file__).parent
 def project_docs(ctx):
     """Generate project documentation.
 
-    These docs are visible at http://robotframework.org/WebDemo/.
-    """
+        """
     args = ['--stylesheet=style.css,extra.css',
             '--link-stylesheet',
             'README.rst',
@@ -24,8 +23,7 @@ def project_docs(ctx):
 def move_docs(ctx):
     """Move report.html and log.html to docs
 
-    These docs are visible http://robotframework.org/WebDemo/.
-    """
+        """
     log = pathlib.Path('./log.html')
     report = pathlib.Path('./report.html')
     dest = pathlib.Path('.') / 'docs'
