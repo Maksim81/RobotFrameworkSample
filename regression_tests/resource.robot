@@ -9,11 +9,12 @@ Library           Selenium2Library
 *** Variables ***
 ${BROWSER}        Chrome
 ${DELAY}          0
-${VALID PURCHASE VALUE}    10000
-${CAR LEASING URL}      https://www.seb.ee/eng/loan-and-leasing/leasing/car-leasing#calculator
+${PURCHASE VALUE}    10000
+${CAR LEASING URL}    https://www.seb.ee/eng/loan-and-leasing/leasing/car-leasing#calculator
 ${LEASING CALCULATOR URL}    https://www.seb.lv/eng/loan-and-leasing/leasing/leasing-calculator
-${CALCULATE}   //button[contains(text(),"Calculate")]
-${BUTTON CLICKER}  document.body.getElementsByClassName('btn btn-dark')[0].click()
+${CALCULATE}      //button[contains(text(),"Calculate")]
+${BUTTON CLICKER}    document.body.getElementsByClassName('btn btn-dark')[0].click()
+
 *** Keywords ***
 Accept Cookies
     Click Link    I agree
@@ -32,12 +33,32 @@ Go To Car leasing page
     Go To    ${CAR LEASING URL}
     Car leasing page Should Be Open
 
-Input Valid Purchase Value
-    [Arguments]    ${VALID PURCHASE VALUE}
-    Input Text    summa    ${VALID PURCHASE VALUE}
+Select Leasing Calculator Frame
 
-Calculate result
-    Execute Javascript   window.document.getElementsByClassName("btn btn-dark")[0].click();
+    Select Frame  css=.calculator-frame
+
+Input Purchase Value
+    [Arguments]    ${PURCHASE VALUE}
+    Input Text    f-summa    10000
+
+Calculate Leasing Result
+
+    Click Button  css=.btn-dark
+
+Add Leasing Result To Comparision
+
+    Click Button  css=.btn.btn-light.js-comparison-add
+
+Financial Leasing Should Contain All Data
+
+     Element Should Contain  css=.col.col-xs-6.col-sm-8.col-label   Leasing financing amount
+
+Operating Leasing Should Contain All Data
+
+    Element Should Contain  css=.col.col-xs-6.col-sm-8.col-label   Monthly payment
+
+Calculate Result Javascript
+    Execute Javascript    window.document.getElementsByClassName("btn btn-dark")[0].click();
 
 Open Browser To Leasing Calculator Page
     Open Browser    ${LEASING CALCULATOR URL}    ${BROWSER}
@@ -48,5 +69,3 @@ Open Browser To Leasing Calculator Page
 Leasing calculator page Should Be Open
     Location Should Be    ${LEASING CALCULATOR URL}
     Title Should Be    Leasing calculator | SEB banka
-
-
