@@ -13,6 +13,7 @@ ${PURCHASE VALUE}    10000
 ${INTEREST VALUE}    5
 ${VEHICLE PRICE}    10000
 ${DOWNPAYMENT}      20
+${CAR LEASING INTEREST VALUE}    10
 ${CAR LEASING URL}    https://www.seb.ee/eng/loan-and-leasing/leasing/car-leasing#calculator
 ${LEASING CALCULATOR URL}    https://www.seb.lv/eng/loan-and-leasing/leasing/leasing-calculator
 ${CALCULATE}      //button[contains(text(),"Calculate")]
@@ -49,7 +50,7 @@ Select Car Financial Lease Without VAT
     Click Element  calc08-type03
 
 Add Car Leasing Result To Comparision
-    Click Link  Add To Comparision
+    Click Element  css=.a.calc08-action-compare
 
 Display Car Leasing Schedule
     Click Element  value-payment-schedule
@@ -61,6 +62,10 @@ Input Vehicle Price Value
 Input Vehicle Downpayment
     [Arguments]    ${DOWNPAYMENT}
     Input Text    calc08-deposit   ${DOWNPAYMENT}
+
+Input Vehicle Leasing Interest
+    [Arguments]    ${CAR LEASING INTEREST VALUE}
+    Input Text    calc08-int   ${CAR LEASING INTEREST VALUE}
 
 Select Leasing Calculator Frame
     Select Frame  css=.calculator-frame
