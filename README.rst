@@ -93,7 +93,7 @@ __ https://github.com/robotframework/SeleniumLibrary#installation
 Running tests
 -------------
 
-The `test cases`_ are located in the ``login_tests`` directory. They can be
+The `test cases`_ are located in the ``regression_tests`` directory. They can be
 executed using the ``robot`` command::
 
     robot regression_tests
@@ -104,7 +104,7 @@ executed using the ``robot`` command::
 You can also run an individual test case file and use various command line
 options supported by Robot Framework::
 
-    robot regression_tests/valid_login.robot
+    robot regression_tests/regression_tests.robot
     robot --test InvalidUserName --loglevel DEBUG regression_tests
 
 Run ``robot --help`` for more information about the command line usage and see
@@ -117,8 +117,8 @@ The browser that is used is controlled by ``${BROWSER}`` variable defined in
 `resource.robot`_ resource file. Firefox browser is used by default, but that
 can be easily overridden from the command line::
 
-    robot --variable BROWSER:Chrome login_tests
-    robot --variable BROWSER:IE login_tests
+    robot --variable BROWSER:Chrome regression_tests
+    robot --variable BROWSER:IE regression_tests
 
 Consult SeleniumLibrary_ documentation about supported browsers.
 
