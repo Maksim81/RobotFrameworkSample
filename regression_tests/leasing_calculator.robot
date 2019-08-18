@@ -25,7 +25,6 @@ Successful Operating Leasing calculation
     Input Purchase Value  10000
     Select From List By Value  f-type  1
     Calculate Leasing Result
-    Sleep  1s
     Operating Leasing Should Contain All Data
     [Teardown]    Close Browser
 
@@ -60,6 +59,40 @@ Interest rate is 0
     Interest Warning Should Be Displayed
     [Teardown]    Close Browser
 
+Leasing Recalculated If Tersms Changed
+    Open Browser To Leasing Calculator Page
+    Leasing Calculator Page Should Be Open
+    Accept Cookies
+    Select Leasing Calculator Frame
+    Input Purchase Value  10000
+    Input Interest Value  0
+    Calculate Leasing Result
+    Input Purchase Value  15000
+    Input Interest Value  0
+    Calculate Leasing Result
+    [Teardown]    Close Browser
+
+Payment Schedule Displayed
+    Open Browser To Leasing Calculator Page
+    Leasing Calculator Page Should Be Open
+    Accept Cookies
+    Select Leasing Calculator Frame
+    Input Purchase Value  10000
+    Input Interest Value  0
+    Calculate Leasing Result
+    Display Leasing Schedule
+    [Teardown]    Close Browser
+
+Several Leasing Conditions To Compare
+    Open Browser To Leasing Calculator Page
+    Leasing Calculator Page Should Be Open
+    Accept Cookies
+    Select Leasing Calculator Frame
+    Input Purchase Value  10000
+    Add Leasing Result To Comparision
+    Input Purchase Value  20000
+    Add Leasing Result To Comparision
+    [Teardown]    Close Browser
 
 
 

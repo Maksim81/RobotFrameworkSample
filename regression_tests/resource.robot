@@ -11,6 +11,8 @@ ${BROWSER}        Chrome
 ${DELAY}          0
 ${PURCHASE VALUE}    10000
 ${INTEREST VALUE}    5
+${VEHICLE PRICE}    10000
+${DOWNPAYMENT}      20
 ${CAR LEASING URL}    https://www.seb.ee/eng/loan-and-leasing/leasing/car-leasing#calculator
 ${LEASING CALCULATOR URL}    https://www.seb.lv/eng/loan-and-leasing/leasing/leasing-calculator
 ${CALCULATE}      //button[contains(text(),"Calculate")]
@@ -34,6 +36,22 @@ Go To Car leasing page
     Go To    ${CAR LEASING URL}
     Car leasing page Should Be Open
 
+Select Car Leasing Frame
+
+    Select Frame  css=.calculator-frame
+
+Add Car Leasing Result To Comparision
+
+    Click Link  Add To Comparision
+
+Display Car Leasing Schedule
+
+    Click Element  value-payment-schedule
+
+Input Vehicle Price Value
+    [Arguments]    ${VEHICLE PRICE}
+    Input Text    calc08-sum    ${VEHICLE PRICE}
+
 Select Leasing Calculator Frame
 
     Select Frame  css=.calculator-frame
@@ -54,13 +72,17 @@ Add Leasing Result To Comparision
 
     Click Button  css=.btn.btn-light.js-comparison-add
 
+Display Leasing Schedule
+
+    Click Button  css=.btn.js-show-payment-schedule
+
 Financial Leasing Should Contain All Data
 
      Element Should Contain  css=.col.col-xs-6.col-sm-8.col-label   Leasing financing amount
 
 Operating Leasing Should Contain All Data
 
-    Element Should Contain  css=.col.col-xs-6.col-sm-8.col-label   Monthly payment
+    Element Should Contain  css=.col.col-xs-6.col-sm-8.col-label
 
 Consulmer Loan Warning Should Be Displayed
 
