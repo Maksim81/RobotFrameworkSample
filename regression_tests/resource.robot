@@ -37,23 +37,32 @@ Go To Car leasing page
     Car leasing page Should Be Open
 
 Select Car Leasing Frame
-
     Select Frame  css=.calculator-frame
 
-Add Car Leasing Result To Comparision
+Select Car Operating Lease
+    Click Element  calc08-type01
 
+Select Car Financial Lease
+    Click Element  calc08-type02
+
+Select Car Financial Lease Without VAT
+    Click Element  calc08-type03
+
+Add Car Leasing Result To Comparision
     Click Link  Add To Comparision
 
 Display Car Leasing Schedule
-
     Click Element  value-payment-schedule
 
 Input Vehicle Price Value
     [Arguments]    ${VEHICLE PRICE}
     Input Text    calc08-sum    ${VEHICLE PRICE}
 
-Select Leasing Calculator Frame
+Input Vehicle Downpayment
+    [Arguments]    ${DOWNPAYMENT}
+    Input Text    calc08-deposit   ${DOWNPAYMENT}
 
+Select Leasing Calculator Frame
     Select Frame  css=.calculator-frame
 
 Input Purchase Value
@@ -65,19 +74,15 @@ Input Interest Value
     Input Text    f-likme    ${INTEREST VALUE}
 
 Calculate Leasing Result
-
     Click Button  css=.btn-dark
 
 Add Leasing Result To Comparision
-
     Click Button  css=.btn.btn-light.js-comparison-add
 
 Display Leasing Schedule
-
     Click Button  css=.btn.js-show-payment-schedule
 
 Financial Leasing Should Contain All Data
-
      Element Should Contain  css=.col.col-xs-6.col-sm-8.col-label   Leasing financing amount
 
 Operating Leasing Should Contain All Data
@@ -85,11 +90,9 @@ Operating Leasing Should Contain All Data
     Element Should Contain  css=.col.col-xs-6.col-sm-8.col-label
 
 Consulmer Loan Warning Should Be Displayed
-
     Element Should Be Visible   f-summa-error
 
 Interest Warning Should Be Displayed
-
     Element Should Be Visible   f-likme-error
 
 Calculate Result Javascript

@@ -13,6 +13,10 @@ Car Leasing Operational Lease
     Car Leasing Page Should Be Open
     Accept Cookies
     Select Leasing Calculator Frame
+    Select Car Operating Lease
+    Input Vehicle Price Value  10000
+    Input Vehicle Downpayment  20
+    Sleep  10s
     [Teardown]    Close Browser
 
 Car Leasing Financial Lease with VAT
@@ -20,6 +24,10 @@ Car Leasing Financial Lease with VAT
     Car Leasing Page Should Be Open
     Accept Cookies
     Select Leasing Calculator Frame
+    Select Car Financial Lease
+    Input Vehicle Price Value  10000
+    Input Vehicle Downpayment  15
+    Sleep  10s
     [Teardown]    Close Browser
 
 Car Leasing Financial Lease without VAT
@@ -27,6 +35,10 @@ Car Leasing Financial Lease without VAT
     Car Leasing Page Should Be Open
     Accept Cookies
     Select Leasing Calculator Frame
+    Select Car Financial Lease Without VAT
+    Input Vehicle Price Value  10000
+    Input Vehicle Downpayment  10
+    Sleep  10s
     [Teardown]    Close Browser
 
 Car Leasing Negative interest rate
