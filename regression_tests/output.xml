@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.6.5 on win32)" generated="20190818 21:11:40.059" rpa="false">
+<suite id="s1" name="Car Leasing" source="C:\Users\Gamma Test\PycharmProjects\WebDemo\regression_tests\car_leasing.robot">
+<test id="s1-t1" name="Car Leasing Operational Lease">
+<kw name="Open Browser To Car Leasing Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${CAR LEASING URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190818 21:11:40.347" level="INFO">Opening browser 'Chrome' to base url 'https://www.seb.ee/eng/loan-and-leasing/leasing/car-leasing#calculator'.</msg>
+<status status="PASS" starttime="20190818 21:11:40.347" endtime="20190818 21:11:45.083"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20190818 21:11:45.083" endtime="20190818 21:11:45.281"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20190818 21:11:45.281" endtime="20190818 21:11:45.282"></status>
+</kw>
+<kw name="Car leasing page Should Be Open" library="resource">
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${CAR LEASING URL}</arg>
+</arguments>
+<msg timestamp="20190818 21:11:45.320" level="INFO">Current location is 'https://www.seb.ee/eng/loan-and-leasing/leasing/car-leasing#calculator'.</msg>
+<status status="PASS" starttime="20190818 21:11:45.283" endtime="20190818 21:11:45.321"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Car leasing | SEB</arg>
+</arguments>
+<msg timestamp="20190818 21:11:45.340" level="INFO">Page title is 'Car leasing | SEB'.</msg>
+<status status="PASS" starttime="20190818 21:11:45.321" endtime="20190818 21:11:45.341"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:11:45.282" endtime="20190818 21:11:45.341"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:11:40.346" endtime="20190818 21:11:45.341"></status>
+</kw>
+<kw name="Car leasing page Should Be Open" library="resource">
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${CAR LEASING URL}</arg>
+</arguments>
+<msg timestamp="20190818 21:11:45.349" level="INFO">Current location is 'https://www.seb.ee/eng/loan-and-leasing/leasing/car-leasing#calculator'.</msg>
+<status status="PASS" starttime="20190818 21:11:45.342" endtime="20190818 21:11:45.350"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Car leasing | SEB</arg>
+</arguments>
+<msg timestamp="20190818 21:11:45.357" level="INFO">Page title is 'Car leasing | SEB'.</msg>
+<status status="PASS" starttime="20190818 21:11:45.350" endtime="20190818 21:11:45.357"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:11:45.342" endtime="20190818 21:11:45.358"></status>
+</kw>
+<kw name="Accept Cookies" library="resource">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>I agree</arg>
+</arguments>
+<msg timestamp="20190818 21:11:45.360" level="INFO">Clicking link 'I agree'.</msg>
+<status status="PASS" starttime="20190818 21:11:45.360" endtime="20190818 21:11:45.850"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:11:45.359" endtime="20190818 21:11:45.850"></status>
+</kw>
+<kw name="Select Leasing Calculator Frame" library="resource">
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>css=.calculator-frame</arg>
+</arguments>
+<msg timestamp="20190818 21:11:45.852" level="INFO">Selecting frame 'css=.calculator-frame'.</msg>
+<status status="PASS" starttime="20190818 21:11:45.852" endtime="20190818 21:11:45.941"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:11:45.851" endtime="20190818 21:11:45.942"></status>
+</kw>
+<kw name="Select Car Operating Lease" library="resource">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>calc08-type01</arg>
+</arguments>
+<msg timestamp="20190818 21:11:45.944" level="INFO">Clicking element 'calc08-type01'.</msg>
+<status status="PASS" starttime="20190818 21:11:45.944" endtime="20190818 21:11:46.167"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:11:45.943" endtime="20190818 21:11:46.168"></status>
+</kw>
+<kw name="Input Vehicle Price Value" library="resource">
+<arguments>
+<arg>10000</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>calc08-sum</arg>
+<arg>${VEHICLE PRICE}</arg>
+</arguments>
+<msg timestamp="20190818 21:11:46.170" level="INFO">Typing text '10000' into text field 'calc08-sum'.</msg>
+<status status="PASS" starttime="20190818 21:11:46.169" endtime="20190818 21:11:46.360"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:11:46.168" endtime="20190818 21:11:46.360"></status>
+</kw>
+<kw name="Input Vehicle Downpayment" library="resource">
+<arguments>
+<arg>20</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>calc08-deposit</arg>
+<arg>${DOWNPAYMENT}</arg>
+</arguments>
+<msg timestamp="20190818 21:11:46.362" level="INFO">Typing text '20' into text field 'calc08-deposit'.</msg>
+<status status="PASS" starttime="20190818 21:11:46.361" endtime="20190818 21:11:46.561"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:11:46.361" endtime="20190818 21:11:46.561"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20190818 21:11:56.564" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20190818 21:11:46.563" endtime="20190818 21:11:56.564"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190818 21:11:56.565" endtime="20190818 21:11:57.738"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:11:40.345" endtime="20190818 21:11:57.739" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Car Leasing Financial Lease with VAT">
+<kw name="Open Browser To Car Leasing Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${CAR LEASING URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190818 21:11:57.742" level="INFO">Opening browser 'Chrome' to base url 'https://www.seb.ee/eng/loan-and-leasing/leasing/car-leasing#calculator'.</msg>
+<status status="PASS" starttime="20190818 21:11:57.742" endtime="20190818 21:12:02.339"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20190818 21:12:02.339" endtime="20190818 21:12:02.729"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20190818 21:12:02.729" endtime="20190818 21:12:02.730"></status>
+</kw>
+<kw name="Car leasing page Should Be Open" library="resource">
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${CAR LEASING URL}</arg>
+</arguments>
+<msg timestamp="20190818 21:12:02.749" level="INFO">Current location is 'https://www.seb.ee/eng/loan-and-leasing/leasing/car-leasing#calculator'.</msg>
+<status status="PASS" starttime="20190818 21:12:02.731" endtime="20190818 21:12:02.749"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Car leasing | SEB</arg>
+</arguments>
+<msg timestamp="20190818 21:12:02.765" level="INFO">Page title is 'Car leasing | SEB'.</msg>
+<status status="PASS" starttime="20190818 21:12:02.749" endtime="20190818 21:12:02.765"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:02.730" endtime="20190818 21:12:02.766"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:11:57.741" endtime="20190818 21:12:02.766"></status>
+</kw>
+<kw name="Car leasing page Should Be Open" library="resource">
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${CAR LEASING URL}</arg>
+</arguments>
+<msg timestamp="20190818 21:12:02.784" level="INFO">Current location is 'https://www.seb.ee/eng/loan-and-leasing/leasing/car-leasing#calculator'.</msg>
+<status status="PASS" starttime="20190818 21:12:02.768" endtime="20190818 21:12:02.784"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Car leasing | SEB</arg>
+</arguments>
+<msg timestamp="20190818 21:12:02.794" level="INFO">Page title is 'Car leasing | SEB'.</msg>
+<status status="PASS" starttime="20190818 21:12:02.784" endtime="20190818 21:12:02.794"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:02.767" endtime="20190818 21:12:02.795"></status>
+</kw>
+<kw name="Accept Cookies" library="resource">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>I agree</arg>
+</arguments>
+<msg timestamp="20190818 21:12:02.796" level="INFO">Clicking link 'I agree'.</msg>
+<status status="PASS" starttime="20190818 21:12:02.796" endtime="20190818 21:12:03.135"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:02.795" endtime="20190818 21:12:03.136"></status>
+</kw>
+<kw name="Select Leasing Calculator Frame" library="resource">
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>css=.calculator-frame</arg>
+</arguments>
+<msg timestamp="20190818 21:12:03.138" level="INFO">Selecting frame 'css=.calculator-frame'.</msg>
+<status status="PASS" starttime="20190818 21:12:03.138" endtime="20190818 21:12:03.250"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:03.137" endtime="20190818 21:12:03.250"></status>
+</kw>
+<kw name="Select Car Financial Lease" library="resource">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>calc08-type02</arg>
+</arguments>
+<msg timestamp="20190818 21:12:03.252" level="INFO">Clicking element 'calc08-type02'.</msg>
+<status status="PASS" starttime="20190818 21:12:03.251" endtime="20190818 21:12:03.440"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:03.251" endtime="20190818 21:12:03.440"></status>
+</kw>
+<kw name="Input Vehicle Price Value" library="resource">
+<arguments>
+<arg>10000</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>calc08-sum</arg>
+<arg>${VEHICLE PRICE}</arg>
+</arguments>
+<msg timestamp="20190818 21:12:03.442" level="INFO">Typing text '10000' into text field 'calc08-sum'.</msg>
+<status status="PASS" starttime="20190818 21:12:03.442" endtime="20190818 21:12:03.614"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:03.441" endtime="20190818 21:12:03.614"></status>
+</kw>
+<kw name="Input Vehicle Downpayment" library="resource">
+<arguments>
+<arg>15</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>calc08-deposit</arg>
+<arg>${DOWNPAYMENT}</arg>
+</arguments>
+<msg timestamp="20190818 21:12:03.615" level="INFO">Typing text '15' into text field 'calc08-deposit'.</msg>
+<status status="PASS" starttime="20190818 21:12:03.615" endtime="20190818 21:12:03.804"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:03.615" endtime="20190818 21:12:03.805"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20190818 21:12:13.807" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20190818 21:12:03.806" endtime="20190818 21:12:13.807"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190818 21:12:13.808" endtime="20190818 21:12:14.980"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:11:57.741" endtime="20190818 21:12:14.981" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Car Leasing Financial Lease without VAT">
+<kw name="Open Browser To Car Leasing Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${CAR LEASING URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190818 21:12:14.985" level="INFO">Opening browser 'Chrome' to base url 'https://www.seb.ee/eng/loan-and-leasing/leasing/car-leasing#calculator'.</msg>
+<status status="PASS" starttime="20190818 21:12:14.984" endtime="20190818 21:12:19.892"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20190818 21:12:19.893" endtime="20190818 21:12:20.164"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20190818 21:12:20.164" endtime="20190818 21:12:20.165"></status>
+</kw>
+<kw name="Car leasing page Should Be Open" library="resource">
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${CAR LEASING URL}</arg>
+</arguments>
+<msg timestamp="20190818 21:12:20.231" level="INFO">Current location is 'https://www.seb.ee/eng/loan-and-leasing/leasing/car-leasing#calculator'.</msg>
+<status status="PASS" starttime="20190818 21:12:20.167" endtime="20190818 21:12:20.231"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Car leasing | SEB</arg>
+</arguments>
+<msg timestamp="20190818 21:12:20.245" level="INFO">Page title is 'Car leasing | SEB'.</msg>
+<status status="PASS" starttime="20190818 21:12:20.232" endtime="20190818 21:12:20.245"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:20.166" endtime="20190818 21:12:20.245"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:14.984" endtime="20190818 21:12:20.245"></status>
+</kw>
+<kw name="Car leasing page Should Be Open" library="resource">
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${CAR LEASING URL}</arg>
+</arguments>
+<msg timestamp="20190818 21:12:20.254" level="INFO">Current location is 'https://www.seb.ee/eng/loan-and-leasing/leasing/car-leasing#calculator'.</msg>
+<status status="PASS" starttime="20190818 21:12:20.246" endtime="20190818 21:12:20.254"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Car leasing | SEB</arg>
+</arguments>
+<msg timestamp="20190818 21:12:20.264" level="INFO">Page title is 'Car leasing | SEB'.</msg>
+<status status="PASS" starttime="20190818 21:12:20.254" endtime="20190818 21:12:20.264"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:20.246" endtime="20190818 21:12:20.264"></status>
+</kw>
+<kw name="Accept Cookies" library="resource">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>I agree</arg>
+</arguments>
+<msg timestamp="20190818 21:12:20.266" level="INFO">Clicking link 'I agree'.</msg>
+<status status="PASS" starttime="20190818 21:12:20.266" endtime="20190818 21:12:20.599"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:20.265" endtime="20190818 21:12:20.599"></status>
+</kw>
+<kw name="Select Leasing Calculator Frame" library="resource">
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>css=.calculator-frame</arg>
+</arguments>
+<msg timestamp="20190818 21:12:20.602" level="INFO">Selecting frame 'css=.calculator-frame'.</msg>
+<status status="PASS" starttime="20190818 21:12:20.601" endtime="20190818 21:12:20.700"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:20.600" endtime="20190818 21:12:20.700"></status>
+</kw>
+<kw name="Select Car Financial Lease Without VAT" library="resource">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>calc08-type03</arg>
+</arguments>
+<msg timestamp="20190818 21:12:20.701" level="INFO">Clicking element 'calc08-type03'.</msg>
+<status status="PASS" starttime="20190818 21:12:20.701" endtime="20190818 21:12:20.911"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:20.700" endtime="20190818 21:12:20.912"></status>
+</kw>
+<kw name="Input Vehicle Price Value" library="resource">
+<arguments>
+<arg>10000</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>calc08-sum</arg>
+<arg>${VEHICLE PRICE}</arg>
+</arguments>
+<msg timestamp="20190818 21:12:20.915" level="INFO">Typing text '10000' into text field 'calc08-sum'.</msg>
+<status status="PASS" starttime="20190818 21:12:20.914" endtime="20190818 21:12:21.099"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:20.913" endtime="20190818 21:12:21.099"></status>
+</kw>
+<kw name="Input Vehicle Downpayment" library="resource">
+<arguments>
+<arg>10</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>calc08-deposit</arg>
+<arg>${DOWNPAYMENT}</arg>
+</arguments>
+<msg timestamp="20190818 21:12:21.101" level="INFO">Typing text '10' into text field 'calc08-deposit'.</msg>
+<status status="PASS" starttime="20190818 21:12:21.101" endtime="20190818 21:12:21.320"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:21.101" endtime="20190818 21:12:21.320"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20190818 21:12:31.322" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20190818 21:12:21.321" endtime="20190818 21:12:31.322"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190818 21:12:31.323" endtime="20190818 21:12:32.496"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:14.983" endtime="20190818 21:12:32.496" critical="yes"></status>
+</test>
+<test id="s1-t4" name="Car Leasing Negative interest rate">
+<kw name="Open Browser To Car Leasing Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${CAR LEASING URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190818 21:12:32.499" level="INFO">Opening browser 'Chrome' to base url 'https://www.seb.ee/eng/loan-and-leasing/leasing/car-leasing#calculator'.</msg>
+<status status="PASS" starttime="20190818 21:12:32.499" endtime="20190818 21:12:36.875"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20190818 21:12:36.875" endtime="20190818 21:12:37.094"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20190818 21:12:37.094" endtime="20190818 21:12:37.095"></status>
+</kw>
+<kw name="Car leasing page Should Be Open" library="resource">
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${CAR LEASING URL}</arg>
+</arguments>
+<msg timestamp="20190818 21:12:37.141" level="INFO">Current location is 'https://www.seb.ee/eng/loan-and-leasing/leasing/car-leasing#calculator'.</msg>
+<status status="PASS" starttime="20190818 21:12:37.096" endtime="20190818 21:12:37.142"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Car leasing | SEB</arg>
+</arguments>
+<msg timestamp="20190818 21:12:37.153" level="INFO">Page title is 'Car leasing | SEB'.</msg>
+<status status="PASS" starttime="20190818 21:12:37.142" endtime="20190818 21:12:37.154"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:37.095" endtime="20190818 21:12:37.154"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:32.499" endtime="20190818 21:12:37.154"></status>
+</kw>
+<kw name="Car leasing page Should Be Open" library="resource">
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${CAR LEASING URL}</arg>
+</arguments>
+<msg timestamp="20190818 21:12:37.162" level="INFO">Current location is 'https://www.seb.ee/eng/loan-and-leasing/leasing/car-leasing#calculator'.</msg>
+<status status="PASS" starttime="20190818 21:12:37.156" endtime="20190818 21:12:37.162"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Car leasing | SEB</arg>
+</arguments>
+<msg timestamp="20190818 21:12:37.172" level="INFO">Page title is 'Car leasing | SEB'.</msg>
+<status status="PASS" starttime="20190818 21:12:37.162" endtime="20190818 21:12:37.172"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:37.155" endtime="20190818 21:12:37.173"></status>
+</kw>
+<kw name="Accept Cookies" library="resource">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>I agree</arg>
+</arguments>
+<msg timestamp="20190818 21:12:37.174" level="INFO">Clicking link 'I agree'.</msg>
+<status status="PASS" starttime="20190818 21:12:37.174" endtime="20190818 21:12:37.500"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:37.173" endtime="20190818 21:12:37.501"></status>
+</kw>
+<kw name="Select Leasing Calculator Frame" library="resource">
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>css=.calculator-frame</arg>
+</arguments>
+<msg timestamp="20190818 21:12:37.504" level="INFO">Selecting frame 'css=.calculator-frame'.</msg>
+<status status="PASS" starttime="20190818 21:12:37.503" endtime="20190818 21:12:37.586"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:37.502" endtime="20190818 21:12:37.586"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190818 21:12:37.586" endtime="20190818 21:12:38.779"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:32.498" endtime="20190818 21:12:38.779" critical="yes"></status>
+</test>
+<test id="s1-t5" name="Car Leasing Conditions are recalculated">
+<kw name="Open Browser To Car Leasing Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${CAR LEASING URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190818 21:12:38.782" level="INFO">Opening browser 'Chrome' to base url 'https://www.seb.ee/eng/loan-and-leasing/leasing/car-leasing#calculator'.</msg>
+<status status="PASS" starttime="20190818 21:12:38.782" endtime="20190818 21:12:43.323"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20190818 21:12:43.324" endtime="20190818 21:12:43.595"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20190818 21:12:43.595" endtime="20190818 21:12:43.595"></status>
+</kw>
+<kw name="Car leasing page Should Be Open" library="resource">
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${CAR LEASING URL}</arg>
+</arguments>
+<msg timestamp="20190818 21:12:43.612" level="INFO">Current location is 'https://www.seb.ee/eng/loan-and-leasing/leasing/car-leasing#calculator'.</msg>
+<status status="PASS" starttime="20190818 21:12:43.596" endtime="20190818 21:12:43.612"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Car leasing | SEB</arg>
+</arguments>
+<msg timestamp="20190818 21:12:43.626" level="INFO">Page title is 'Car leasing | SEB'.</msg>
+<status status="PASS" starttime="20190818 21:12:43.612" endtime="20190818 21:12:43.627"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:43.595" endtime="20190818 21:12:43.627"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:38.781" endtime="20190818 21:12:43.627"></status>
+</kw>
+<kw name="Car leasing page Should Be Open" library="resource">
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${CAR LEASING URL}</arg>
+</arguments>
+<msg timestamp="20190818 21:12:43.635" level="INFO">Current location is 'https://www.seb.ee/eng/loan-and-leasing/leasing/car-leasing#calculator'.</msg>
+<status status="PASS" starttime="20190818 21:12:43.628" endtime="20190818 21:12:43.635"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Car leasing | SEB</arg>
+</arguments>
+<msg timestamp="20190818 21:12:43.643" level="INFO">Page title is 'Car leasing | SEB'.</msg>
+<status status="PASS" starttime="20190818 21:12:43.635" endtime="20190818 21:12:43.643"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:43.628" endtime="20190818 21:12:43.643"></status>
+</kw>
+<kw name="Accept Cookies" library="resource">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>I agree</arg>
+</arguments>
+<msg timestamp="20190818 21:12:43.645" level="INFO">Clicking link 'I agree'.</msg>
+<status status="PASS" starttime="20190818 21:12:43.644" endtime="20190818 21:12:44.025"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:43.644" endtime="20190818 21:12:44.025"></status>
+</kw>
+<kw name="Select Leasing Calculator Frame" library="resource">
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>css=.calculator-frame</arg>
+</arguments>
+<msg timestamp="20190818 21:12:44.027" level="INFO">Selecting frame 'css=.calculator-frame'.</msg>
+<status status="PASS" starttime="20190818 21:12:44.027" endtime="20190818 21:12:44.107"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:44.026" endtime="20190818 21:12:44.107"></status>
+</kw>
+<kw name="Input Vehicle Price Value" library="resource">
+<arguments>
+<arg>10000</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>calc08-sum</arg>
+<arg>${VEHICLE PRICE}</arg>
+</arguments>
+<msg timestamp="20190818 21:12:44.109" level="INFO">Typing text '10000' into text field 'calc08-sum'.</msg>
+<status status="PASS" starttime="20190818 21:12:44.109" endtime="20190818 21:12:44.273"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:44.108" endtime="20190818 21:12:44.274"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190818 21:12:44.275" endtime="20190818 21:12:45.453"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:38.781" endtime="20190818 21:12:45.453" critical="yes"></status>
+</test>
+<test id="s1-t6" name="Car Leasing Payment Schedule Generated">
+<kw name="Open Browser To Car Leasing Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${CAR LEASING URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190818 21:12:45.456" level="INFO">Opening browser 'Chrome' to base url 'https://www.seb.ee/eng/loan-and-leasing/leasing/car-leasing#calculator'.</msg>
+<status status="PASS" starttime="20190818 21:12:45.456" endtime="20190818 21:12:50.011"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20190818 21:12:50.012" endtime="20190818 21:12:50.302"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20190818 21:12:50.302" endtime="20190818 21:12:50.303"></status>
+</kw>
+<kw name="Car leasing page Should Be Open" library="resource">
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${CAR LEASING URL}</arg>
+</arguments>
+<msg timestamp="20190818 21:12:50.325" level="INFO">Current location is 'https://www.seb.ee/eng/loan-and-leasing/leasing/car-leasing#calculator'.</msg>
+<status status="PASS" starttime="20190818 21:12:50.304" endtime="20190818 21:12:50.325"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Car leasing | SEB</arg>
+</arguments>
+<msg timestamp="20190818 21:12:50.354" level="INFO">Page title is 'Car leasing | SEB'.</msg>
+<status status="PASS" starttime="20190818 21:12:50.326" endtime="20190818 21:12:50.354"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:50.304" endtime="20190818 21:12:50.354"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:45.456" endtime="20190818 21:12:50.354"></status>
+</kw>
+<kw name="Car leasing page Should Be Open" library="resource">
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${CAR LEASING URL}</arg>
+</arguments>
+<msg timestamp="20190818 21:12:50.366" level="INFO">Current location is 'https://www.seb.ee/eng/loan-and-leasing/leasing/car-leasing#calculator'.</msg>
+<status status="PASS" starttime="20190818 21:12:50.357" endtime="20190818 21:12:50.366"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Car leasing | SEB</arg>
+</arguments>
+<msg timestamp="20190818 21:12:50.376" level="INFO">Page title is 'Car leasing | SEB'.</msg>
+<status status="PASS" starttime="20190818 21:12:50.366" endtime="20190818 21:12:50.376"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:50.355" endtime="20190818 21:12:50.376"></status>
+</kw>
+<kw name="Accept Cookies" library="resource">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>I agree</arg>
+</arguments>
+<msg timestamp="20190818 21:12:50.380" level="INFO">Clicking link 'I agree'.</msg>
+<status status="PASS" starttime="20190818 21:12:50.379" endtime="20190818 21:12:50.661"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:50.378" endtime="20190818 21:12:50.662"></status>
+</kw>
+<kw name="Select Leasing Calculator Frame" library="resource">
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>css=.calculator-frame</arg>
+</arguments>
+<msg timestamp="20190818 21:12:50.664" level="INFO">Selecting frame 'css=.calculator-frame'.</msg>
+<status status="PASS" starttime="20190818 21:12:50.663" endtime="20190818 21:12:50.765"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:50.662" endtime="20190818 21:12:50.766"></status>
+</kw>
+<kw name="Display Car Leasing Schedule" library="resource">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>value-payment-schedule</arg>
+</arguments>
+<msg timestamp="20190818 21:12:50.767" level="INFO">Clicking element 'value-payment-schedule'.</msg>
+<status status="PASS" starttime="20190818 21:12:50.767" endtime="20190818 21:12:50.961"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:50.766" endtime="20190818 21:12:50.962"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190818 21:12:50.962" endtime="20190818 21:12:52.149"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:45.455" endtime="20190818 21:12:52.149" critical="yes"></status>
+</test>
+<test id="s1-t7" name="Car Leasing Add to comparision">
+<kw name="Open Browser To Car Leasing Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${CAR LEASING URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190818 21:12:52.152" level="INFO">Opening browser 'Chrome' to base url 'https://www.seb.ee/eng/loan-and-leasing/leasing/car-leasing#calculator'.</msg>
+<status status="PASS" starttime="20190818 21:12:52.152" endtime="20190818 21:12:56.903"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20190818 21:12:56.903" endtime="20190818 21:12:57.161"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20190818 21:12:57.161" endtime="20190818 21:12:57.163"></status>
+</kw>
+<kw name="Car leasing page Should Be Open" library="resource">
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${CAR LEASING URL}</arg>
+</arguments>
+<msg timestamp="20190818 21:12:57.211" level="INFO">Current location is 'https://www.seb.ee/eng/loan-and-leasing/leasing/car-leasing#calculator'.</msg>
+<status status="PASS" starttime="20190818 21:12:57.164" endtime="20190818 21:12:57.211"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Car leasing | SEB</arg>
+</arguments>
+<msg timestamp="20190818 21:12:57.223" level="INFO">Page title is 'Car leasing | SEB'.</msg>
+<status status="PASS" starttime="20190818 21:12:57.211" endtime="20190818 21:12:57.223"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:57.163" endtime="20190818 21:12:57.223"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:52.151" endtime="20190818 21:12:57.223"></status>
+</kw>
+<kw name="Car leasing page Should Be Open" library="resource">
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${CAR LEASING URL}</arg>
+</arguments>
+<msg timestamp="20190818 21:12:57.232" level="INFO">Current location is 'https://www.seb.ee/eng/loan-and-leasing/leasing/car-leasing#calculator'.</msg>
+<status status="PASS" starttime="20190818 21:12:57.224" endtime="20190818 21:12:57.233"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Car leasing | SEB</arg>
+</arguments>
+<msg timestamp="20190818 21:12:57.239" level="INFO">Page title is 'Car leasing | SEB'.</msg>
+<status status="PASS" starttime="20190818 21:12:57.233" endtime="20190818 21:12:57.239"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:57.224" endtime="20190818 21:12:57.240"></status>
+</kw>
+<kw name="Accept Cookies" library="resource">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>I agree</arg>
+</arguments>
+<msg timestamp="20190818 21:12:57.241" level="INFO">Clicking link 'I agree'.</msg>
+<status status="PASS" starttime="20190818 21:12:57.241" endtime="20190818 21:12:57.552"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:57.240" endtime="20190818 21:12:57.552"></status>
+</kw>
+<kw name="Select Leasing Calculator Frame" library="resource">
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>css=.calculator-frame</arg>
+</arguments>
+<msg timestamp="20190818 21:12:57.554" level="INFO">Selecting frame 'css=.calculator-frame'.</msg>
+<status status="PASS" starttime="20190818 21:12:57.554" endtime="20190818 21:12:57.645"></status>
+</kw>
+<status status="PASS" starttime="20190818 21:12:57.553" endtime="20190818 21:12:57.645"></status>
+</kw>
+<kw name="Add Car Leasing Result To Comparision" library="resource">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>Add To Comparision</arg>
+</arguments>
+<msg timestamp="20190818 21:12:57.648" level="INFO">Clicking link 'Add To Comparision'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190818 21:12:58.202" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-87.png"&gt;&lt;img src="selenium-screenshot-87.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190818 21:12:57.686" endtime="20190818 21:12:58.203"></status>
+</kw>
+<msg timestamp="20190818 21:12:58.206" level="FAIL">Link with locator 'Add To Comparision' not found.</msg>
+<status status="FAIL" starttime="20190818 21:12:57.647" endtime="20190818 21:12:58.206"></status>
+</kw>
+<status status="FAIL" starttime="20190818 21:12:57.646" endtime="20190818 21:12:58.206"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190818 21:12:58.207" endtime="20190818 21:12:59.391"></status>
+</kw>
+<status status="FAIL" starttime="20190818 21:12:52.151" endtime="20190818 21:12:59.392" critical="yes">Link with locator 'Add To Comparision' not found.</status>
+</test>
+<doc>A test suite with a several test cases for Car leasing calculator
+
+This test has a workflow that is created using keywords in
+the imported resource file.</doc>
+<status status="FAIL" starttime="20190818 21:11:40.063" endtime="20190818 21:12:59.395"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="1">Critical Tests</stat>
+<stat pass="6" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="6" fail="1" id="s1" name="Car Leasing">Car Leasing</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
