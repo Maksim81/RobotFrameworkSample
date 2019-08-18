@@ -10,6 +10,7 @@ Library           Selenium2Library
 ${BROWSER}        Chrome
 ${DELAY}          0
 ${PURCHASE VALUE}    10000
+${INTEREST VALUE}    5
 ${CAR LEASING URL}    https://www.seb.ee/eng/loan-and-leasing/leasing/car-leasing#calculator
 ${LEASING CALCULATOR URL}    https://www.seb.lv/eng/loan-and-leasing/leasing/leasing-calculator
 ${CALCULATE}      //button[contains(text(),"Calculate")]
@@ -39,7 +40,11 @@ Select Leasing Calculator Frame
 
 Input Purchase Value
     [Arguments]    ${PURCHASE VALUE}
-    Input Text    f-summa    10000
+    Input Text    f-summa    ${PURCHASE VALUE}
+
+Input Interest Value
+    [Arguments]    ${INTEREST VALUE}
+    Input Text    f-likme    ${INTEREST VALUE}
 
 Calculate Leasing Result
 
@@ -56,6 +61,14 @@ Financial Leasing Should Contain All Data
 Operating Leasing Should Contain All Data
 
     Element Should Contain  css=.col.col-xs-6.col-sm-8.col-label   Monthly payment
+
+Consulmer Loan Warning Should Be Displayed
+
+    Element Should Be Visible   f-summa-error
+
+Interest Warning Should Be Displayed
+
+    Element Should Be Visible   f-likme-error
 
 Calculate Result Javascript
     Execute Javascript    window.document.getElementsByClassName("btn btn-dark")[0].click();
